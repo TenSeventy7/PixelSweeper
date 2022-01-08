@@ -1,10 +1,11 @@
 # Pixel Sweeper
 
-A Minesweeper game with Pixel Art style. Written in HTML5, CSS, and JavaScript.
+Nice, pixel-styled, minesweeper game. A project for the University of the Philippines - Los Baños.
 
-## To-Do
- - [X] Initialize repository for backups and snapshots
- - [ ] Add basic level functionality
- - [ ] Write level data for use with the game
- - [ ] Add assets, including graphics, SFX, and music
- - [ ] Design the game using CSS and some JavaScript
+## Issues running locally?
+
+It is recommended to run Pixel Sweeper on a server before accessing as Chrome now restricts loading JS files in its CORB/CORS policy. [A website](https://pixel-sweeper.vercel.app) is also setup for testing. The website reflects all changes in source.
+
+### Tested on:
+- Google Chrome
+- Microsoft Edge (Chromium) - PC and mobile
