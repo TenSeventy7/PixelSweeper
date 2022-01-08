@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<!-- This is an HTML template! -->
+<!-- These are loaded dynamically by the index.html -->
+
+<body>
+    <div id="page-container">
+        <div id="title-screen" class="title-screen">
+            <div id="title-screen-container">
+                <div class="title-game-logo">
+                    <img src="img/game-logo.png">
+                </div>
+                <div class="game-main-buttons">
+                    <button id="title-btn-play">Play!</button>
+                </div>
+                <div class="game-option-buttons">
+                    <button id="title-btn-music">
+                        <img src="img/icons/musicOn.png">
+                    </button>
+                    <button id="title-btn-sound">
+                        <img src="img/icons/audioOn.png">
+                    </button>
+                    <button id="title-btn-about">
+                        <img src="img/icons/information.png">
+                    </button>
+                    <button id="title-btn-save">
+                        <img src="img/icons/save.png">
+                    </button>
+                </div>
+            </div>
+            <div class="title-background"></div>
+        </div>
+        <div id="level-select-screen" class="level-select-screen dialog-gone">
+            <div class="level-select-container" id="level-select-screen-container">
+                <div class="game-header level-select-header">
+                    <div class="level-select-header-button-container">
+                        <button class="game-header-btn" id="level-select-header-btn-back">
+                            <img src="img/icons/arrowLeft.png">
+                        </button>
+                    </div>
+                    <div class="game-header-text level-select-header-text-container">
+                        <p>Level Select</p>
+                    </div>
+                </div>
+                <div class="level-select-content">
+                    <div class="level-select-nav">
+                        <div class="level-select-navigation-back">
+                            <img id="level-select-back" src="img/buttons/back.svg" draggable="false">
+                        </div>
+                    </div>
+                    <div class="level-select-data-container">
+                        <div class="level-select-data">
+                            <div class="level-select-model">
+                                <div id="level-select-threed-model"></div>
+                            </div>
+                            <div class="level-select-information">
+                                <div class="level-select-name">
+                                    <p id="level-select-name">Name</p>
+                                </div>
+                                <div class="level-select-second-info">
+                                    <div class="level-select-best-time">
+                                        <img src="img/icons/time.png">
+                                        <p id="level-select-best-time">--:--</p>
+                                    </div>
+                                    <div class="level-select-bomb-count">
+                                        <img src="img/icons/flag.png">
+                                        <p id="level-select-bomb-count">0</p>
+                                    </div>
+                                </div>
+                                <div class="level-select-third-info">
+                                    <div class="level-select-board-size">
+                                        <img src="img/tile/mine.png">
+                                        <p id="level-select-board-size">0x0</p>
+                                    </div>
+                                </div>
+                                <div class="level-select-buttons">
+                                    <button id="level-select-btn-play">
+                                        <img src="img/icons/play.png">
+                                    </button>
+                                    <button id="level-select-btn-restart">
+                                        <img src="img/icons/restart.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level-select-nav">
+                        <div class="level-select-navigation-next">
+                            <img id="level-select-next" src="img/buttons/next.svg" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="level-select-background-overlay"></div>
+            <div id="level-select-background" class="level-select-background"></div>
+        </div>
+    </div>
+</body>
+
+</html>

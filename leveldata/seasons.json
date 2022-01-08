@@ -1,0 +1,54 @@
+[
+    {
+        "levelId": 0,
+        "levelIdName": "spring",
+        "levelName": "Spring",
+        "levelMg": "bgm/spring.mp3",
+        "levelBg": "../img/backgrounds/seasons-spring.png",
+        "levelFg": "gl/level_select_spring.glb",
+        "boardData": {
+            "rows": 8,
+            "columns": 8,
+            "mines": 10
+        }
+    },
+    {
+        "levelId": 1,
+        "levelIdName": "summer",
+        "levelName": "Summer",
+        "levelMg": "bgm/summer.mp3",
+        "levelBg": "../img/backgrounds/seasons-summer.png",
+        "levelFg": "gl/level_select_summer.glb",
+        "boardData": {
+            "rows": 10,
+            "columns": 10,
+            "mines": 15
+        }
+    },
+    {
+        "levelId": 2,
+        "levelIdName": "fall",
+        "levelName": "Fall",
+        "levelMg": "bgm/fall.mp3",
+        "levelBg": "../img/backgrounds/seasons-fall.png",
+        "levelFg": "gl/level_select_fall.gltf",
+        "boardData": {
+            "rows": 12,
+            "columns": 12,
+            "mines": 20
+        }
+    },
+    {
+        "levelId": 3,
+        "levelIdName": "winter",
+        "levelName": "Winter",
+        "levelMg": "bgm/winter.mp3",
+        "levelBg": "../img/backgrounds/seasons-winter.png",
+        "levelFg": "gl/level_select_winter.glb",
+        "boardData": {
+            "rows": 16,
+            "columns": 16,
+            "mines": 30
+        }
+    }
+]

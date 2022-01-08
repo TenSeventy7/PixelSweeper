@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pixel Sweeper</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#1ea7e1">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1ea7e1">
+    <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#1ea7e1">
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div id="start-game">
+        <div>
+            <div class="loading-game-logo">
+                <img src="img/game-logo.png">
+            </div>
+            <div class="start-game-text">
+                <p class="start-game-text-header animate__animated animate__pulse animate__infinite">
+                    Click or tap anywhere to continue
+                </p>
+                <p class="start-game-text-subtitle">
+                    Due to a privacy change on all major browsers, the page must now be interacted <b>first</b> in order
+                    for the page to have sounds.
+                </p>
+                <p class="start-game-text-final">
+                    Thank you for playing Pixel Sweeper.<br>
+                    (C) 2021 John Vincent Corcega
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="game">
+        <div class="game-container">
+            <div class="game-content">
+                <div id="dialog-bg-end-game" class="dialog-container dialog-gone animate__animated">
+                    <div id="dialog-end-game" class="dialog dialog-gone animate__animated">
+                        <div>
+                            <div class="dialog-title">
+                                <h1 id="dialog-end-game-title">You Win!</h1>
+                                <img id="dialog-end-game-image" src="img/icons/time.png">
+                                <p id="dialog-end-game-new" class="dialog-content-subtitle">New Record!</p>
+                            </div>
+                            <div class="dialog-buttons">
+                                <div class="dialog-pause-buttons-container">
+                                    <button id="dialog-end-btn-restart">Restart</button>
+                                    <button id="dialog-end-btn-exit">Exit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dialog-bg-pause" class="dialog-container dialog-gone animate__animated">
+                    <div id="dialog-pause" class="dialog dialog-gone animate__animated">
+                        <div>
+                            <div class="dialog-title">
+                                <h1>Paused</h1>
+                            </div>
+                            <div class="dialog-buttons">
+                                <div class="dialog-pause-buttons-container">
+                                    <button id="dialog-btn-resume">Resume</button>
+                                    <button id="dialog-btn-restart">Restart</button>
+                                    <button id="dialog-btn-exit">Exit</button>
+                                </div>
+                                <div class="dialog-option-buttons">
+                                    <button id="dialog-btn-music">
+                                        <img src="img/icons/musicOn.png">
+                                    </button>
+                                    <button id="dialog-btn-sound">
+                                        <img src="img/icons/audioOn.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dialog-bg-generic" class="dialog-container dialog-gone animate__animated">
+                    <div id="dialog-generic" class="dialog dialog-gone animate__animated">
+                        <div>
+                            <div class="dialog-title">
+                                <h1 id="dialog-title">Dialog Title</h1>
+                            </div>
+                            <div class="dialog-content">
+                                <p id="dialog-content-text" class="dialog-content-text">Dialog Content</p>
+                                <p id="dialog-content-subtitle" class="dialog-content-subtitle">Dialog Subtitle</p>
+                            </div>
+                            <div class="dialog-buttons">
+                                <div class="dialog-buttons-container">
+                                    <button id="dialog-btn-negative">Negative</button>
+                                    <button id="dialog-btn-neutral">Neutral</button>
+                                    <button id="dialog-btn-positive">Positive</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dialog-bg-save-data" class="dialog-container dialog-gone animate__animated">
+                    <div id="dialog-save-data" class="dialog dialog-gone animate__animated">
+                        <div>
+                            <div class="dialog-title">
+                                <h1 id="dialog-title">Download/Upload Game Data</h1>
+                            </div>
+                            <div class="dialog-content">
+                                <p class="dialog-content-text dialog-save-data-text">This feature may cause issues with
+                                    your current saved data.</p>
+                                <p class="dialog-content-subtitle">The game will reload after upload.<br>All of your
+                                    data will be overwritten!</p>
+                            </div>
+                            <div class="dialog-buttons">
+                                <div class="dialog-buttons-container">
+                                    <button id="dialog-btn-upload">Upload</button>
+                                    <button id="dialog-btn-download">Download</button>
+                                </div>
+                                <div class="dialog-buttons-container">
+                                    <button id="dialog-btn-save-close">
+                                        <img src="img/icons/cross.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="loading-screen" class="loading-screen animate__animated dialog-gone">
+                    <div id="loading-screen-container">
+                        <div class="loading-game-logo">
+                            <img src="img/game-logo.png">
+                        </div>
+                        <div class="loading-progress-container">
+                            <p class="loading-text">Loading...</p>
+                            <progress id="loading-progress" value="0" max="100">15%</progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="dialog-bg-first-play" class="dialog-container dialog-gone animate__animated">
+                    <div id="dialog-first-play" class="dialog-first-play dialog-gone animate__animated">
+                        <div>
+                            <div class="dialog-first-play-title">
+                                <h1>Looks like this is your first time playing Pixel Sweeper!</h1>
+                            </div>
+                            <div class="dialog-first-play-features">
+                                <div class="dialog-first-play-feature">
+                                    <img src="img/icons/mouseLeft.png">
+                                    <p>Click or tap to reveal blocks.</p>
+                                </div>
+                                <div class="dialog-first-play-feature">
+                                    <img src="img/icons/mouseRight.png">
+                                    <p>Right-click or long tap to flag mines.</p>
+                                </div>
+                                <div
+                                    class="dialog-first-play-bottom-text animate__animated animate__pulse animate__infinite">
+                                    <p>Click or tap anywhere to continue</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="lib/helpers/classes.js"></script>
+    <script type="module" src="lib/main.js"></script>
+</body>
+
+</html>
