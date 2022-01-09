@@ -114,15 +114,16 @@ self.addEventListener("activate", e => {
     })()), self.clients.claim()
 })
 
-self.addEventListener("fetch", e => {
-    "navigate" === e.request.mode && e.respondWith((async () => {
-        try {
-            const a = await e.preloadResponse;
-            return a || await fetch(e.request)
-        } catch (e) {
-            console.log("Fetch failed; returning offline page instead.", e);
-            const a = await caches.open(CACHE_NAME);
-            return await a.match("/")
-        }
-    })())
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request)
+            .then(function(response) {
+                    // Cache hit - return response
+                    if (response) {
+                        return response;
+                    }
+                    return fetch(event.request);
+                }
+            )
+    );
 });
