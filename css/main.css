@@ -198,6 +198,10 @@ button:active {
     display: table-cell;
     width: 3vw;
     height: 3vw;
+
+    font-family: "Kenney Mini";
+    font-size: 0.8rem;
+    text-align: center;
     
     background: url('../img/tile/normal.png');
     background-size: contain;
@@ -212,11 +216,13 @@ button:active {
 }
 
 #level-screen-board-col.revealed {
-    font-family: "Kenney Mini";
-    font-size: 0.8rem;
     background: url('../img/tile/revealed.png'), #acc0c1;
     background-size: contain;
-    text-align: center;
+}
+
+#level-screen-board-col.clicked-mine {
+    background: url('../img/tile/clickedMine.png'), #acc0c1;
+    background-size: contain;
 }
 
 #level-screen-board-row {
