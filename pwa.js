@@ -5,7 +5,7 @@
     (C) 2021-2022 John Vincent M. Corcega - TenSeventy7
 */
 
-const OFFLINE_VERSION = 1.1;
+const OFFLINE_VERSION = 1.2;
 
 BASE_CACHE_FILES = [
     "/",
@@ -89,13 +89,14 @@ BASE_CACHE_FILES = [
     "/img/tile/flag.png",
     "/img/tile/mine.png",
     "/img/tile/normal.png",
+    "/img/tile/clickedMine.png",
     "/img/tile/revealed.png",
     "/img/tile/wrongMine.png",
     "/img/tile/mineAnimation.gif",
     "/img/game-logo.png"
 ]
 
-CACHE_NAME = "offline_1.1"
+CACHE_NAME = "offline_1.2"
 OFFLINE_URL = "/";
 
 self.addEventListener("install", e => {
